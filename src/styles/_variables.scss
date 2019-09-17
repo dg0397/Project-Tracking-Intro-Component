@@ -2,36 +2,32 @@
 
 /*###Primary*/
 
-$very-dark-blue: hsl(243, 87%, 12%);
-$desaturated-blue: hsl(238, 22%, 44%);
-$color:#F8F8FE;
-/*### Accent*/
+$red: hsl(0, 100%, 68%);
 
-$bright-blue: hsl(224, 93%, 58%);
-$moderate-cyan: hsl(170, 45%, 43%);
-$light-bright-blue:hsl(224, 93%, 63%);
-$dark-bright-blue: hsl(224, 93%, 54%);
+
 /*### Neutral*/
 
-$light-grayish-blue: hsl(240, 64%, 98%);
-$light-gray: hsl(0, 0%, 75%);
+$very-dark-blue: hsl(230, 29%, 20%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayish-blue: hsl(231, 7%, 65%);
+$light-grayish-blue: hsl(207, 33%, 95%);
 
 /*## Typography*/
 
 /*### Body*/
 
-$font-size: 14px;
+$font-size: 18px;
 
 /*### Font*/
 
 /*### Headings, Call-to-actions, Header Navigation*/
-$font-heading: 'Raleway', sans-serif;
+$font-heading: 'Barlow Condensed', sans-serif;
 
 $font-w-heading-bold:700;
 $font-w-heading-normal:400;
 
 /*### Body*/
-$font-body: 'Open Sans', sans-serif;
+$font-body: 'Barlow', sans-serif;
 
 $font-w-body-normal:400;
 
