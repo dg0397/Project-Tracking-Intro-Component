@@ -2,58 +2,72 @@
 @import "./styles/variables";
 @import "./styles/mixins";
 
-body{
+body {
     margin: 0 auto;
     font-family: $font-body;
     font-size: $font-size;
     font-weight: $font-w-body-normal;
     min-width: 320px;
     max-width: 500px;
-    @media screen and(min-width:720px){
+
+    @media screen and(min-width:720px) {
         max-width: none;
     }
-    @media screen and(min-width:1024px){
+
+    @media screen and(min-width:1024px) {
         font-size: 18px;
     }
 }
-.container{
+
+.container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: repeat(4, auto);
     position: relative;
-    &::before{
+
+    &::before {
         content: " ";
         width: 50vw;
         height: 55vh;
-        background-color:$light-grayish-blue; 
+        background-color: $light-grayish-blue;
         position: absolute;
         z-index: -1;
         right: 0;
         border-radius: 0 0 0 50px;
     }
+
+    /*HEADER*/
     @import "./styles/menu";
-    .hero{
+
+    /*HERO*/
+    .hero {
         margin: 0 0 3rem auto;
         @include image();
         max-width: 400px;
-        @media screen and(min-width:720px){
+
+        @media screen and(min-width:720px) {
             grid-area: hero;
             max-width: none;
         }
     }
-    .main{
+
+    /*MAIN*/
+    .main {
         padding: 0rem 1.6rem;
         margin-top: 1rem;
-        &  >  *{
+
+        &>* {
             margin-bottom: 1rem;
         }
-        p:first-child{
+
+        p:first-child {
             text-transform: uppercase;
             letter-spacing: .2rem;
             font-family: $font-heading;
             font-size: 16px;
-            color:$grayish-blue;
-            span{
+            color: $grayish-blue;
+
+            span {
                 margin-right: 1rem;
                 background-color: $very-dark-blue;
                 color: $light-grayish-blue;
@@ -64,74 +78,94 @@ body{
                 letter-spacing: initial;
             }
         }
-        h1{
-            text-transform: uppercase;
-            font-family: $font-heading;
-            font-weight: $font-w-heading-bold;
-            color:  $very-dark-blue;
-            font-size: 30px;
+
+        h1 {
+            @include heading($font-heading, $font-w-heading-bold, $very-dark-blue, 30px)
         }
-        p{
+
+        p {
             color: $dark-grayish-blue;
             font-size: 16px;
         }
-        .call__to__sign__in{
+
+        /*BTN*/
+        .call__to__sign__in {
             display: flex;
             justify-content: space-between;
             align-items: center;
             text-transform: uppercase;
-            .container__btn{
+
+            .container__btn {
                 width: 40%;
-                button{
-                    @include btn($red,$light-grayish-blue,$red-dark,$red-light,$font-w-heading-bold);
-                    a{
-                        color:$light-grayish-blue;
+
+                button {
+                    @include btn($red, $light-grayish-blue, $red-dark, $red-light, $font-w-heading-bold);
+
+                    a {
+                        color: $light-grayish-blue;
                         text-decoration: none;
                         font-family: $font-heading;
                         text-transform: uppercase
                     }
                 }
             }
-            p{
+
+            p {
                 width: 55%;
                 font-size: 14px;
                 word-spacing: .3rem;
-                color:$grayish-blue;
+                color: $grayish-blue;
                 font-family: $font-heading;
 
             }
         }
-        @media screen and(min-width:720px){
+
+        @media screen and(min-width:720px) {
             grid-area: main;
             align-self: center;
             padding: 0;
             padding-left: 6rem;
             margin: 0;
             max-width: 500px;
-            h1{
+
+            h1 {
                 font-size: 50px;
             }
-            .call__to__sign__in{
+
+            .call__to__sign__in {
                 margin-top: 3rem
             }
-            .paragr{
+
+            .paragr {
                 max-width: 250px;
             }
         }
     }
-    footer{
+
+    footer {
         margin: 2rem auto 0 auto;
-        @media screen and(min-width:720px){
+
+        .attribution {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+            font-family: $font-heading;
+            text-transform: uppercase
+        }
+
+        @media screen and(min-width:720px) {
             grid-area: footer;
         }
     }
-    @media screen and(min-width:720px){
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,auto);
+
+    @media screen and(min-width:720px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: "header header"
-                            "main hero"
-                            "footer footer"
+            "main hero"
+            "footer footer"
     }
 }
-
-

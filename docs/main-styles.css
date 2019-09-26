@@ -15,7 +15,7 @@
 body {
   margin: 0 auto;
   font-family: "Barlow", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   min-width: 320px;
   max-width: 500px;
@@ -38,6 +38,10 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
   position: relative;
+  /*HEADER*/
+  /*HEADER*/
+  /*HERO*/
+  /*MAIN*/
 }
 
 .container::before {
@@ -56,10 +60,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2.2rem 1.6rem;
+  /*NAVBAR*/
 }
 
 .container #header .title {
   width: 10%;
+  /*LOGO*/
 }
 
 .container #header .title .container__logo {
@@ -76,6 +82,8 @@ body {
 
 .container #header #nav {
   width: 20%;
+  /*ICON MENU*/
+  /*MENU*/
 }
 
 .container #header #nav .icon {
@@ -155,8 +163,9 @@ body {
   background-color: white;
   left: 10%;
   right: 10%;
+  top: 12%;
   text-align: center;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 1rem 0;
   list-style: none;
   border-radius: 5px;
@@ -205,19 +214,24 @@ body {
   }
   .container #header #nav .menu li {
     margin: 0;
+    margin-right: .5rem;
   }
   .container #header #nav .menu .login {
     border: 0;
     padding: 0;
+    margin: 0;
     list-style: disc;
     color: #a0a1ac;
     padding-left: 1rem;
+  }
+  .container #header #nav .menu li:nth-child(3) {
+    margin-right: 3rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container #header #nav .menu .login {
-    padding-left: 2.5rem;
+    padding-left: 3rem;
   }
 }
 
@@ -230,7 +244,7 @@ body {
 @media screen and (min-width: 720px) {
   .container #header {
     grid-area: header;
-    padding: 2.2rem  6rem;
+    padding: 2.2rem 6rem;
   }
 }
 
@@ -255,6 +269,7 @@ body {
 .container .main {
   padding: 0rem 1.6rem;
   margin-top: 1rem;
+  /*BTN*/
 }
 
 .container .main > * {
@@ -281,11 +296,11 @@ body {
 }
 
 .container .main h1 {
-  text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
-  color: #242942;
   font-size: 30px;
+  color: #242942;
+  text-transform: uppercase;
 }
 
 .container .main p {
@@ -369,6 +384,17 @@ body {
 
 .container footer {
   margin: 2rem auto 0 auto;
+}
+
+.container footer .attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.container footer .attribution a {
+  color: #3e52a3;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 720px) {
